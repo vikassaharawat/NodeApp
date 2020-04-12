@@ -24,7 +24,7 @@ node {
         /* 
 			You would need to first register with DockerHub before you can push images to your account
 		*/
-        docker.withRegistry('https://gcr.io', 'dockerhub') {
+        docker.withRegistry('https://gcr.io/my-project-monitoring-269707', 'docker') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
             } 
